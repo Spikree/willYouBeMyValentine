@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head> 
+    <body style="background-image: url(https://img.freepik.com/premium-vector/seamless-pattern-with-cute-pink-bows-white-background-vector-fairy-tale-illustration_456865-2235.jpg);">
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Will you be my Valentine</h1>
+            </div>
+            <br>
+            <div class="gif_container">
+                <img src="https://media1.tenor.com/m/PDPDHGvuLoEAAAAd/lana-del-rey-marinerscomplex.gif" alt="Cute animated illustration" height="200px">
+            </div>
+            <br>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
